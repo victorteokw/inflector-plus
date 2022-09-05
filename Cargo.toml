@@ -1,16 +1,16 @@
 [package]
-name = "Inflector"
-version = "0.11.4"
-authors = ["Josh Teeter<joshteeter@gmail.com>"]
+name = "inflector-plus"
+version = "0.11.5"
+authors = ["Josh Teeter<joshteeter@gmail.com>", "Victor Teo<victor.teo@fillmula.com>"]
 include = [
   "**/*.rs",
   "Cargo.toml",
   "README.md"
 ]
 readme = "README.md"
-repository = "https://github.com/whatisinternet/inflector"
+repository = "https://github.com/victorteo/inflector-plus"
 documentation = "https://docs.rs/Inflector"
-homepage = "https://github.com/whatisinternet/inflector"
+homepage = "https://github.com/victorteo/inflector-plus"
 license="BSD-2-Clause"
 description = """
 Adds String based inflections for Rust. Snake, kebab, camel, sentence, class, title and table cases as well as ordinalize, deordinalize, demodulize, foreign key, and pluralize/singularize are supported as both traits and pure functions acting on String types.
@@ -19,7 +19,7 @@ keywords = ["pluralize", "Inflector", "camel", "snake", "inflection"]
 categories = ["text-processing", "value-formatting"]
 
 [badges]
-travis-ci = { repository = "whatisinternet/Inflector" }
+travis-ci = { repository = "victorteo/inflector-plus" }
 
 [features]
 default = ['heavyweight']

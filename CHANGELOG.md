@@ -1,3 +1,8 @@
+# 0.11.5
+
+## Non-breaking changes:
+- Fix wrong pluralization of "person"
+
 # 0.11.4
 
 ## Non-breaking changes:

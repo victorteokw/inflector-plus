@@ -1,8 +1,10 @@
-# Rust Inflector
+# inflector-plus
 
 
 [![Build Status](https://travis-ci.org/whatisinternet/Inflector.svg?branch=master)](https://travis-ci.org/whatisinternet/Inflector) [![Crates.io](https://img.shields.io/crates/v/Inflector.svg)](https://crates.io/crates/inflector)[![Crate downloads](https://img.shields.io/crates/d/Inflector.svg)](https://crates.io/crates/inflector)
 
+This project is forked from https://github.com/whatisinternet/Inflector.
+The original author doesn't maintain this anymore.
 
 Adds String based inflections for Rust. Snake, kebab, train, camel,
 sentence, class, and title cases as well as ordinalize,

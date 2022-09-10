@@ -31,6 +31,11 @@ pub mod kebabcase;
 /// Example string `Train-Case`
 pub mod traincase;
 
+/// Provides conversion to and detection of word case strings.
+///
+/// Example string `word case`
+pub mod wordcase;
+
 /// Provides conversion to and detection of sentence case strings.
 ///
 /// Example string `Sentence case`

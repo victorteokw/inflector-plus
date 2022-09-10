@@ -2,7 +2,7 @@
 #![cfg_attr(feature = "unstable", feature(test))]
 
 //! Adds String based inflections for Rust. Snake, kebab, train, camel,
-//! sentence, class, and title cases as well as ordinalize,
+//! word, sentence, class, and title cases as well as ordinalize,
 //! deordinalize, demodulize, deconstantize, and foreign key are supported as
 //! both traits and pure functions acting on String types.
 //! ```rust
@@ -25,6 +25,7 @@ extern crate regex;
 /// - Train case
 /// - Screaming snake case
 /// - Table case
+/// - Word case
 /// - Sentence case
 /// - Snake case
 /// - Pascal case
@@ -67,6 +68,9 @@ use cases::kebabcase::is_kebab_case;
 
 use cases::traincase::to_train_case;
 use cases::traincase::is_train_case;
+
+use cases::wordcase::to_word_case;
+use cases::wordcase::is_word_case;
 
 use cases::sentencecase::to_sentence_case;
 use cases::sentencecase::is_sentence_case;
@@ -115,6 +119,9 @@ pub trait Inflector {
 
     fn to_train_case(&self) -> String;
     fn is_train_case(&self) -> bool;
+
+    fn to_word_case(&self) -> String;
+    fn is_word_case(&self) -> bool;
 
     fn to_sentence_case(&self) -> String;
     fn is_sentence_case(&self) -> bool;
@@ -206,6 +213,8 @@ macro_rules! implement_string_for {
                     is_kebab_case => bool,
                     to_train_case => String,
                     is_train_case => bool,
+                    to_word_case => String,
+                    is_word_case => bool,
                     to_sentence_case => String,
                     is_sentence_case => bool,
                     to_title_case => String,
@@ -282,6 +291,8 @@ mod benchmarks {
         benchmark_str_is_kebab => is_kebab_case => "foo-bar",
         benchmark_str_to_train => to_train_case => "fooBar",
         benchmark_str_is_train => is_train_case => "Foo-Bar",
+        benchmark_str_to_word => to_word_case => "fooBar",
+        benchmark_str_is_word => is_word_case => "foo bar",
         benchmark_str_to_sentence => to_sentence_case => "fooBar",
         benchmark_str_is_sentence => is_sentence_case => "Foo bar",
         benchmark_str_to_title => to_title_case => "fooBar",

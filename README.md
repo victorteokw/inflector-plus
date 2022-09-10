@@ -7,7 +7,7 @@ This project is forked from https://github.com/whatisinternet/Inflector.
 The original author doesn't maintain this anymore.
 
 Adds String based inflections for Rust. Snake, kebab, train, camel,
-sentence, class, and title cases as well as ordinalize,
+word, sentence, class, and title cases as well as ordinalize,
 deordinalize, demodulize, deconstantize, foreign key, table case, and pluralize/singularize are supported as both traits and pure functions
 acting on &str and String types.
 
@@ -79,6 +79,9 @@ extern crate inflector;
 
 // use inflector::cases::traincase::to_train_case;
 // use inflector::cases::traincase::is_train_case;
+
+// use inflector::cases::wordcase::to_word_case;
+// use inflector::cases::wordcase::is_word_case;
 
 // use inflector::cases::sentencecase::to_sentence_case;
 // use inflector::cases::sentencecase::is_sentence_case;

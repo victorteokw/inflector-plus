@@ -282,6 +282,12 @@ mod tests {
     }
 
     #[test]
+    fn is_correct_from_word_case() {
+        let convertable_string: String = "foo bar".to_owned();
+        assert_eq!(is_sentence_case(&convertable_string), false)
+    }
+
+    #[test]
     fn is_correct_from_sentence_case() {
         let convertable_string: String = "Foo bar".to_owned();
         assert_eq!(is_sentence_case(&convertable_string), true)

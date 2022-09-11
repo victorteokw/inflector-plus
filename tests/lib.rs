@@ -151,7 +151,12 @@ gated_string_tests![
     string_pluralize_already_plural => to_plural => "hooves".to_string() => "hooves".to_string(),
     string_singular => to_singular => "crates".to_string() => "crate".to_string(),
     string_demodulize => demodulize => "Foo::Bar".to_string() => "Bar".to_string(),
-    string_deconstantize => deconstantize => "Foo::Bar".to_string() => "Foo".to_string()
+    string_deconstantize => deconstantize => "Foo::Bar".to_string() => "Foo".to_string(),
+    string_articlize_normal => articlize => "apple".to_string() => "an apple".to_string(),
+    string_articlize_irregular_1 => articlize => "user".to_string() => "a user".to_string(),
+    string_articlize_irregular_2 => articlize => "hour".to_string() => "an hour".to_string(),
+    string_dearticlize_an => dearticlize => "an apple".to_string() => "apple".to_string(),
+    string_dearticlize_a => dearticlize => "a user".to_string() => "user".to_string()
 ];
 
 number_tests![

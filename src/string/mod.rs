@@ -19,5 +19,14 @@ pub mod pluralize;
 /// Example string `FooBars` -> `FooBar`
 #[cfg(feature = "heavyweight")]
 pub mod singularize;
-
+/// Provides conversion to articlized strings.
+///
+/// Example string `user` -> `a user`
+#[cfg(feature = "heavyweight")]
+pub mod articlize;
+/// Provides conversion to dearticlized strings.
+///
+/// Example string `a cat` -> `cat`
+#[cfg(feature = "heavyweight")]
+pub mod dearticlize;
 mod constants;

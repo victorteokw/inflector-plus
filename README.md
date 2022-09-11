@@ -103,6 +103,9 @@ extern crate inflector;
 
 // use inflector::string::pluralize::to_plural;
 // use inflector::string::singularize::to_singular;
+
+// use inflector::string::articlize::articlize;
+// use inflector::string::articlize::dearticlize;
 ...
 fn main() {
 ...

@@ -184,6 +184,5 @@ fn singularize_string_if_a_regex_will_match() {
 fn singularize_string_returns_none_option_if_no_match() {
     let expected_string: String = "bacon".to_owned();
     let asserted_string: String = to_singular("bacon");
-
     assert!(expected_string == asserted_string);
 }

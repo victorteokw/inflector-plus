@@ -1,9 +1,16 @@
+# 0.11.7
+
+## Non-breaking changes:
+- Added articlize
+- Added dearticlize
+
 # 0.11.6
+## Non-breaking changes:
 - Added word case
 
 # 0.11.5
 
-## Non-breaking changes:
+## Fixes:
 - Fix wrong pluralization of "person"
 
 # 0.11.4

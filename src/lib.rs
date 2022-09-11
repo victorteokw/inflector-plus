@@ -42,6 +42,8 @@ pub mod suffix;
 /// - Demodulize
 /// - Pluralize
 /// - Singularize
+/// - Articlize
+/// - Dearticlize
 #[cfg(feature = "heavyweight")]
 pub mod string;
 
@@ -99,6 +101,11 @@ use string::pluralize::to_plural;
 #[cfg(feature = "heavyweight")]
 use string::singularize::to_singular;
 
+#[cfg(feature = "heavyweight")]
+use string::articlize::articlize;
+#[cfg(feature = "heavyweight")]
+use string::dearticlize::dearticlize;
+
 #[allow(missing_docs)]
 pub trait Inflector {
 
@@ -153,6 +160,11 @@ pub trait Inflector {
     fn to_plural(&self) -> String;
     #[cfg(feature = "heavyweight")]
     fn to_singular(&self) -> String;
+
+    #[cfg(feature = "heavyweight")]
+    fn articlize(&self) -> String;
+    #[cfg(feature = "heavyweight")]
+    fn dearticlize(&self) -> String;
 }
 
 
@@ -232,7 +244,9 @@ macro_rules! implement_string_for {
                     to_plural => String,
                     to_singular => String,
                     demodulize => String,
-                    deconstantize => String
+                    deconstantize => String,
+                    articlize => String,
+                    dearticlize => String
                 ];
             }
         )*
@@ -338,6 +352,8 @@ mod benchmarks {
         benchmark_string_demodulize => demodulize => "Foo::Bar".to_string(),
         benchmark_string_deconstantize => deconstantize => "Foo::Bar".to_string(),
         benchmark_str_demodulize => demodulize => "Foo::Bar",
-        benchmark_str_deconstantize => deconstantize => "Foo::Bar"
+        benchmark_str_deconstantize => deconstantize => "Foo::Bar",
+        benchmark_str_articlize => articlize => "crate",
+        benchmark_str_dearticlize => dearticlize => "a crate"
     ];
 }
